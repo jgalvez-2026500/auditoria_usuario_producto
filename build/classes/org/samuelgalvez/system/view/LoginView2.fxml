@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" styleClass="vboxPadre" stylesheets="@../resources/styles/LoginStyles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.samuelgalvez.system.controller.LoginController">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <children>
+      <VBox alignment="CENTER" prefHeight="480.0" prefWidth="380.0" styleClass="vbox">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/images/cat-dance-cat.gif" />
+               </image>
+            </ImageView>
+            <Label prefHeight="48.0" prefWidth="166.0" styleClass="etiqueta" text="Ingrese Usuario o Correo" />
+            <TextField fx:id="txtUserOrEmail" prefHeight="38.0" prefWidth="215.0" styleClass="campo" />
+            <Label layoutX="134.0" layoutY="304.0" prefHeight="44.0" prefWidth="145.0" styleClass="etiqueta" text="Ingrese su contraseña" />
+            <PasswordField fx:id="pwdPassword" styleClass="campo" />
+            <HBox alignment="CENTER" prefHeight="184.0" prefWidth="382.0">
+               <children>
+                  <Hyperlink maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onRegister" prefHeight="31.0" prefWidth="215.0" styleClass="link" text="¿No tienes Cuenta? Registrate" />
+               </children>
+            </HBox>
+            <Button id="btn-login" mnemonicParsing="false" onMouseClicked="#onLogin" text="Iniciar Sesion" />
+         </children>
+      </VBox>
+   </children>
+</VBox>
